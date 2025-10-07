@@ -44,7 +44,7 @@ The narrative approach demonstrates how I'd think about product marketing: takin
 - I can walk through any design decisions, expand boss mechanics, or add new realms
 
 Built by Ashleigh Bayer  
-avbayer96@gmail.com | Live Demo Link: [your-demo-url]
+avbayer96@gmail.com | Live Demo Link: railway-deploy-saga-production.up.railway.app
 
 ### Running locally
 ```bash
