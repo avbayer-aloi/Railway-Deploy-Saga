@@ -9,7 +9,7 @@ interface CombatLogProps {
   maxEntries?: number;
 }
 
-export default function CombatLog({ entries, maxEntries }: CombatLogProps) {
+export default function CombatLog({ entries }: CombatLogProps) {
   const logRef = useRef<HTMLDivElement>(null);
   
   // Auto-scroll to bottom when new entries are added

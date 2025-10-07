@@ -6,7 +6,7 @@ import { realms } from '@/lib/data';
 import Button from '@/components/UI/Button';
 
 export default function QuestScreen() {
-  const { currentRealm, setScreen, completeRealm, completedRealms } = useGameState();
+  const { currentRealm, setScreen, completedRealms } = useGameState();
   
   const realm = realms.find(r => r.id === currentRealm);
   const isRealmCompleted = currentRealm ? completedRealms.includes(currentRealm) : false;
@@ -187,7 +187,7 @@ export default function QuestScreen() {
                 <strong>Realm Conquered!</strong>
               </p>
               <p className="text-base font-story text-green-300 text-center">
-                The {realm?.name} has been defeated and its power claimed. This realm's sigil has been added to your collection.
+                The {realm?.name} has been defeated and its power claimed. This realm&apos;s sigil has been added to your collection.
               </p>
             </div>
           </motion.div>
@@ -205,9 +205,6 @@ export default function QuestScreen() {
               onClick={handleStartCombat}
               size="lg"
               className="text-xl px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 animate-glow"
-              style={{
-                boxShadow: '0 0 25px rgba(239, 68, 68, 0.4)',
-              }}
             >
               ⚔️ Enter Combat
             </Button>

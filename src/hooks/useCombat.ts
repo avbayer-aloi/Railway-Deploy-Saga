@@ -9,8 +9,7 @@ import {
   StatusEffect,
   PALADIN_ABILITIES,
   PALADIN_ABILITY_SETS,
-  BOSS_DATA,
-  BossData
+  BOSS_DATA
 } from '@/types/combat';
 import { BossRealm } from '@/types';
 
@@ -148,9 +147,9 @@ export function useCombat() {
     setCombatState(prev => {
       if (!prev) return prev;
 
-      let newPlayer = { ...prev.player };
-      let newBoss = { ...prev.boss };
-      let newLog = [...prev.combatLog];
+      const newPlayer = { ...prev.player };
+      const newBoss = { ...prev.boss };
+      const newLog = [...prev.combatLog];
 
       // Calculate damage/healing
       let actionValue = 0;
@@ -277,9 +276,9 @@ export function useCombat() {
     setCombatState(prev => {
       if (!prev) return prev;
 
-      let newPlayer = { ...prev.player };
-      let newBoss = { ...prev.boss };
-      let newLog = [...prev.combatLog];
+      const newPlayer = { ...prev.player };
+      const newBoss = { ...prev.boss };
+      const newLog = [...prev.combatLog];
 
       // Simple AI: choose random action based on current boss
       const bossData = BOSS_DATA[prev.boss.id];

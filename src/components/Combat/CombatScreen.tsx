@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useCombat } from '@/hooks/useCombat';
 import { useGameState } from '@/hooks/useGameState';
 import { BossRealm } from '@/types';
-import { CombatAction, BOSS_DATA } from '@/types/combat';
+import { BOSS_DATA } from '@/types/combat';
 import InitiativeD20 from './InitiativeD20';
 import HPBar from './HPBar';
 import CombatLog from './CombatLog';

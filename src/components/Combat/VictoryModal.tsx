@@ -138,9 +138,6 @@ export default function VictoryModal({ bossName, sigilReward, victoryText, onCon
             <Button
               onClick={onContinue}
               className="bg-gradient-to-r from-yellow-600 to-amber-700 hover:from-yellow-500 hover:to-amber-600 text-white font-bold px-8 py-3 rounded-lg border-2 border-yellow-400 shadow-lg transition-all duration-300"
-              style={{
-                boxShadow: '0 0 25px rgba(251, 191, 36, 0.4)',
-              }}
             >
               🗺️ Return to Map
             </Button>
@@ -153,7 +150,7 @@ export default function VictoryModal({ bossName, sigilReward, victoryText, onCon
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            "Order restored. The stack is clean."
+            &quot;Order restored. The stack is clean.&quot;
           </motion.div>
         </div>
       </motion.div>

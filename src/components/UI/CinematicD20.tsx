@@ -14,13 +14,13 @@ export default function CinematicD20({ size = 'lg', className = '' }: CinematicD
     lg: 'w-48 h-48'
   };
 
-  // D20 vertices for proper icosahedron
-  const phi = (1 + Math.sqrt(5)) / 2; // Golden ratio
-  const vertices = [
-    [0, 1, phi], [0, -1, phi], [0, 1, -phi], [0, -1, -phi],
-    [1, phi, 0], [-1, phi, 0], [1, -phi, 0], [-1, -phi, 0],
-    [phi, 0, 1], [-phi, 0, 1], [phi, 0, -1], [-phi, 0, -1]
-  ];
+  // D20 vertices for proper icosahedron (commented out as unused)
+  // const phi = (1 + Math.sqrt(5)) / 2; // Golden ratio
+  // const vertices = [
+  //   [0, 1, phi], [0, -1, phi], [0, 1, -phi], [0, -1, -phi],
+  //   [1, phi, 0], [-1, phi, 0], [1, -phi, 0], [-1, -phi, 0],
+  //   [phi, 0, 1], [-phi, 0, 1], [phi, 0, -1], [-phi, 0, -1]
+  // ];
 
   return (
     <div className={`${sizes[size]} ${className} relative perspective-1000`}>
@@ -43,7 +43,7 @@ export default function CinematicD20({ size = 'lg', className = '' }: CinematicD
         <div className="absolute inset-0 preserve-3d">
           {/* Front pyramid faces */}
           {[...Array(10)].map((_, i) => {
-            const angle = (i * 36) * Math.PI / 180;
+            // Angle calculation not needed for direct degree rotation
             const elevation = i % 2 === 0 ? 45 : -45;
             
             return (
@@ -96,7 +96,7 @@ export default function CinematicD20({ size = 'lg', className = '' }: CinematicD
           
           {/* Back pyramid faces */}
           {[...Array(10)].map((_, i) => {
-            const angle = (i * 36 + 18) * Math.PI / 180;
+            // Angle calculation not needed for direct degree rotation
             const elevation = i % 2 === 0 ? 135 : -135;
             
             return (

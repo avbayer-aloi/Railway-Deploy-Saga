@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import { useGameState } from '@/hooks/useGameState';
 import { useGlobalAudio } from '@/components/Game';
-import { useEffect } from 'react';
+// Removed unused import
 import CinematicD20 from '@/components/UI/CinematicD20';
-import Button from '@/components/UI/Button';
+// Removed unused import
 import SoundToggle from '@/components/UI/SoundToggle';
 
 export default function HomeScreen() {

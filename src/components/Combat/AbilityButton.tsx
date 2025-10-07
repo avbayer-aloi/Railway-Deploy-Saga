@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+// Removed unused imports
 import { CombatAction } from '@/types/combat';
 import { useState, useEffect } from 'react';
 
@@ -125,7 +125,7 @@ export default function AbilityButton({ ability, onClick, disabled = false }: Ab
             </div>
           )}
           <div className="text-amber-300 text-sm italic text-center" style={{textShadow: '1px 1px 3px rgba(0,0,0,1), 0 0 6px rgba(0,0,0,0.8)'}}>
-            "{ability.flavorText}"
+            &quot;{ability.flavorText}&quot;
           </div>
         </div>
       )}

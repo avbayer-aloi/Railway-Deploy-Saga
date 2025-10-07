@@ -18,7 +18,7 @@ export function useAudio() {
     audio.play().then(() => {
       setIsPlaying(true);
       audioRef.current = audio;
-    }).catch(error => {
+    }).catch(() => {
       // Silently handle audio errors
     });
   }, [isPlaying, isMuted]);

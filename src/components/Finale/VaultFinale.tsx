@@ -333,9 +333,6 @@ export default function VaultFinale() {
               onClick={handleDeployOnRailway}
               size="lg"
               className="text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 w-full sm:w-auto"
-              style={{
-                boxShadow: '0 0 25px rgba(147, 51, 234, 0.4), 0 8px 32px rgba(0,0,0,0.6)',
-              }}
             >
               Deploy on Railway
             </Button>

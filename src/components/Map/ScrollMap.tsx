@@ -30,18 +30,18 @@ export default function ScrollMap() {
   const [showPowerUp, setShowPowerUp] = useState(false);
   const mapRef = useRef<HTMLDivElement>(null);
 
-  // Define the boss progression order
-  const bossOrder: BossRealm[] = [
-    'docker-tiamat',
-    'proxy-valheim', 
-    'shadowcloud',
-    'silent-watcher',
-    'terraform-lich'
-  ];
-
   // Boss marker positions on the map (percentage-based) - memoized for performance
-  const bossMarkers: BossMarker[] = useMemo(() => 
-    realms.map(realm => {
+  const bossMarkers: BossMarker[] = useMemo(() => {
+    // Define the boss progression order
+    const bossOrder: BossRealm[] = [
+      'docker-tiamat',
+      'proxy-valheim', 
+      'shadowcloud',
+      'silent-watcher',
+      'terraform-lich'
+    ];
+
+    return realms.map(realm => {
       const bossIndex = bossOrder.indexOf(realm.id);
       const isCompleted = completedRealms.includes(realm.id);
       
@@ -58,7 +58,8 @@ export default function ScrollMap() {
         completed: isCompleted,
         unlocked: isUnlocked
       };
-    }), [completedRealms]);
+    });
+  }, [completedRealms]);
 
   useEffect(() => {
     // Start scroll animation after component mounts
@@ -869,9 +870,6 @@ export default function ScrollMap() {
                   <Button
                     onClick={handleFight}
                     className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold px-6 py-2 rounded-lg border-2 border-red-400 shadow-lg transition-all duration-300"
-                    style={{
-                      boxShadow: '0 0 20px rgba(239, 68, 68, 0.4)',
-                    }}
                   >
                     ⚔️ Fight!
                   </Button>
@@ -970,9 +968,6 @@ export default function ScrollMap() {
                   <Button
                     onClick={handleCompleteBoss}
                     className="bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-500 hover:to-emerald-600 text-white font-bold px-8 py-3 rounded-lg border-2 border-green-400 shadow-lg transition-all duration-300"
-                    style={{
-                      boxShadow: '0 0 25px rgba(34, 197, 94, 0.4)',
-                    }}
                   >
                     🎉 Claim Victory!
                   </Button>

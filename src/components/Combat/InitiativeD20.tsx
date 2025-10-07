@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 interface InitiativeD20Props {
   isRolling: boolean;
@@ -10,12 +10,10 @@ interface InitiativeD20Props {
 }
 
 export default function InitiativeD20({ isRolling, onRollComplete, autoStart = true }: InitiativeD20Props) {
-  const [rollCount, setRollCount] = useState(0);
 
   useEffect(() => {
     if (isRolling && autoStart) {
       const timer = setTimeout(() => {
-        setRollCount(prev => prev + 1);
         onRollComplete();
       }, 2500);
       return () => clearTimeout(timer);
