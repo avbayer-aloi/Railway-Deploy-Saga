@@ -1,51 +1,56 @@
-The Lost Tales of Arygoden
+## The Lost Tales of Arygoden
+An interactive, cinematic web experience I built to demonstrate Railway's infrastructure features and shows how enterprise infrastructure challenges map to Railway solutions through gamified storytelling. 
 
-An interactive, cinematic web experience built to demonstrate Railway’s infrastructure features in a fun, gamified way. Designed as a portfolio piece for the Railway Product Marketing role, the game shows how common enterprise infrastructure challenges can be simplified with Railway.
+#### Built as a portfolio piece for the Railway Product Marketing role.
 
-Concept
+### What it does
+- Interactive boss battles representing real infrastructure pain points
+- Each boss maps to a Railway feature (Docker Tiamat → Build & Deploy, Proxy Valheim → Network & Connect, etc.)
+- Cinematic story flow: character selection, world exploration, vault finale
+- Collect sigils that demonstrate Railway feature benefits in enterprise contexts
+- Atmospheric audio and particle effects for immersive experience
 
-Players journey through mystical realms, each ruled by an “infrastructure demon” representing a real-world enterprise pain point. Every boss encounter directly maps to a Railway feature:
+### Tech
+- Next.js 15 (App Router), TypeScript, TailwindCSS v4
+- Framer Motion for animations and transitions
+- Zustand for game state management
+- Custom audio system with ambient and cinematic cues
+- Fantasy/medieval themed UI
 
-Boss	Infrastructure Challenge	Railway Feature Demo	Replaces/Competes With
-Docker Tiamat	Multi-container builds, deployment chaos	Build & Deploy	Docker, Helm, Heroku, DigitalOcean, Cloud Run
-Proxy Valheim	Networking, service discovery, routing	Network & Connect	Envoy, Cilium, NGINX, Istio, HAProxy
-Shadowcloud	Scaling & high-load management	Scale & Grow	Kubernetes, AWS, Nomad, BetterStack
-Silent Watcher	Monitoring, logging, observability	Monitor & Observe	Datadog, Sentry, OpenTelemetry
-Terraform Lich-King	Infrastructure as Code drift & collaboration	Evolve & Collaborate	Terraform, Spacelift
+### Why I built this
+Railway simplifies infrastructure for developers, but those benefits can feel abstract. I wanted to combine my interests: gaming, storytelling, and film, and create a campagin that makes the value proposition tangible - each boss battle shows exactly which enterprise pain point Railway solves and what it replaces (Docker, Kubernetes, Terraform, Datadog, etc.).
 
-Each combat mechanic and boss “attack” is metaphorical for these enterprise challenges, while Railway features act as the player’s “powers” to overcome them.
+The narrative approach demonstrates how I'd think about product marketing: taking complex technical features and making them relatable, memorable, and shareable. Instead of "Railway has container orchestration," it's "defeat Docker Tiamat's multi-container chaos."
 
-Technical Implementation
+### What's real vs demo
+- Story progression: fully functional navigation through all game screens
+- Boss mechanics: each attack/power metaphor maps to actual Railway features
+- Character selection: ties player roles to technical personas (Paladin = engineer, Bard = archivist, Thief = preservationist)
+- Animations: production-quality transitions and effects
+- Feature mapping: accurately represents Railway's competitive positioning vs. Docker, Kubernetes, Terraform, Datadog
 
-Framework: Next.js 15 (App Router)
+### Boss battles & Railway features
+| Boss | Infrastructure Challenge | Railway Feature | Replaces/Competes With |
+|------|-------------------------|-----------------|------------------------|
+| Docker Tiamat | Multi-container builds, deployment chaos | Build & Deploy | Docker, Helm, Heroku, DigitalOcean, Cloud Run |
+| Proxy Valheim | Networking, service discovery, routing | Network & Connect | Envoy, Cilium, NGINX, Istio, HAProxy |
+| Shadowcloud | Scaling & high-load management | Scale & Grow | Kubernetes, AWS, Nomad, BetterStack |
+| Silent Watcher | Monitoring, logging, observability | Monitor & Observe | Datadog, Sentry, OpenTelemetry |
+| Terraform Lich-King | Infrastructure as Code drift & collaboration | Evolve & Collaborate | Terraform, Spacelift |
 
-Styling: TailwindCSS v4 with fantasy/medieval theme
+### Notes
+- Design matches Railway's aesthetic (dark theme, neon accents, developer-focused)
+- Modular architecture allows swapping bosses/features without breaking game flow
+- I can walk through any design decisions, expand boss mechanics, or add new realms
 
-Animations: Framer Motion for cinematic transitions, hover effects, particle systems
+Built by Ashleigh Bayer  
+avbayer96@gmail.com | Live Demo Link: [your-demo-url]
 
-State Management: Zustand for game/combat state
+### Running locally
+```bash
+git clone [repo-url]
+npm install
+npm run dev
 
-Audio: Integrated ambient and cinematic cues via custom hooks
-
-TypeScript: Full type safety across all components
-
-Developer Notes
-
-Exploration and combat are modular, so bosses or features can be swapped without breaking flow
-
-Game mechanics demonstrate feature benefits in enterprise contexts, not just gameplay
-
-Sigils collected during combat map directly to Railway features, giving a tangible “demo” of the value proposition
-
-Project Flow
-HomeScreen → OpeningCrawl → CharacterSelect → WorldMap → QuestScreen → VaultFinale
-
-
-Opening Crawl sets the narrative of enterprise infrastructure challenges
-
-Character selection aligns users with roles/tools (Paladin = engineer, Bard = archivist, Thief = preservationist)
-
-World map visualizes infrastructure complexity with interactive nodes
-
-Boss encounters tie gameplay mechanics to Railway features
+Open http://localhost:3000 to start your quest
 
