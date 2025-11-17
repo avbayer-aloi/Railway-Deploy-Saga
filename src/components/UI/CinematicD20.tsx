@@ -43,7 +43,6 @@ export default function CinematicD20({ size = 'lg', className = '' }: CinematicD
         <div className="absolute inset-0 preserve-3d">
           {/* Front pyramid faces */}
           {[...Array(10)].map((_, i) => {
-            // Angle calculation not needed for direct degree rotation
             const elevation = i % 2 === 0 ? 45 : -45;
             
             return (
@@ -96,7 +95,6 @@ export default function CinematicD20({ size = 'lg', className = '' }: CinematicD
           
           {/* Back pyramid faces */}
           {[...Array(10)].map((_, i) => {
-            // Angle calculation not needed for direct degree rotation
             const elevation = i % 2 === 0 ? 135 : -135;
             
             return (

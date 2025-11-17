@@ -30,16 +30,17 @@ export default function ScrollMap() {
   const [showPowerUp, setShowPowerUp] = useState(false);
   const mapRef = useRef<HTMLDivElement>(null);
 
+  // Define the boss progression order
+  const bossOrder: BossRealm[] = useMemo(() => [
+    'docker-tiamat',
+    'proxy-valheim', 
+    'shadowcloud',
+    'silent-watcher',
+    'terraform-lich'
+  ], []);
+
   // Boss marker positions on the map (percentage-based) - memoized for performance
   const bossMarkers: BossMarker[] = useMemo(() => {
-    // Define the boss progression order
-    const bossOrder: BossRealm[] = [
-      'docker-tiamat',
-      'proxy-valheim', 
-      'shadowcloud',
-      'silent-watcher',
-      'terraform-lich'
-    ];
 
     return realms.map(realm => {
       const bossIndex = bossOrder.indexOf(realm.id);
@@ -59,7 +60,7 @@ export default function ScrollMap() {
         unlocked: isUnlocked
       };
     });
-  }, [completedRealms]);
+  }, [completedRealms, bossOrder]);
 
   useEffect(() => {
     // Start scroll animation after component mounts

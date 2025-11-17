@@ -6,7 +6,6 @@ import { useEffect, useRef } from 'react';
 
 interface CombatLogProps {
   entries: CombatLogEntry[];
-  maxEntries?: number;
 }
 
 export default function CombatLog({ entries }: CombatLogProps) {
