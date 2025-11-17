@@ -187,7 +187,7 @@ export default function QuestScreen() {
                 <strong>Realm Conquered!</strong>
               </p>
               <p className="text-base font-story text-green-300 text-center">
-                {`The ${realm?.name} has been defeated and its power claimed. This realm\'s sigil has been added to your collection.`}
+                {`The ${realm?.name} has been defeated and its power claimed. This realm's sigil has been added to your collection.`}
               </p>
             </div>
           </motion.div>

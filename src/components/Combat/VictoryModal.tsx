@@ -150,7 +150,7 @@ export default function VictoryModal({ bossName, sigilReward, victoryText, onCon
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            {`\"Order restored. The stack is clean.\"`}
+            {`"Order restored. The stack is clean."`}
           </motion.div>
         </div>
       </motion.div>

@@ -100,7 +100,7 @@ export default function DefeatModal({ onRetry, onReturnToMap }: DefeatModalProps
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            {`\"Even the mightiest paladins must learn from failure...\"`}
+            {`"Even the mightiest paladins must learn from failure..."`}
           </motion.div>
 
           {/* Action Buttons */}
@@ -133,7 +133,7 @@ export default function DefeatModal({ onRetry, onReturnToMap }: DefeatModalProps
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            {`Learn from this defeat. Study your enemy\'s patterns. Victory awaits the prepared.`}
+            {`Learn from this defeat. Study your enemy's patterns. Victory awaits the prepared.`}
           </motion.div>
         </div>
       </motion.div>
