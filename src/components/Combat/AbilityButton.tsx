@@ -124,7 +124,7 @@ export default function AbilityButton({ ability, onClick, disabled = false }: Ab
             </div>
           )}
           <div className="text-amber-300 text-sm italic text-center" style={{textShadow: '1px 1px 3px rgba(0,0,0,1), 0 0 6px rgba(0,0,0,0.8)'}}>
-            {`"${ability.flavorText}"`}
+            {`\"${ability.flavorText}\"`}
           </div>
         </div>
       )}
